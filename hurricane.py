@@ -125,23 +125,24 @@ def max_cain_count():
 #sets area as an empty string and cane_count to 0. These will be used later in our function. 
   area = ''
   cane_count = 0
-  
+# compares impact_count to current cane_count, and if the impact_count is greater, than it will replace the cane_count and impact_area will become the new area  
   for impact_area, impact_count in damaged_areas.items():
     if impact_count > cane_count:
       area = impact_area
       cane_count = impact_count
+# This is a print statement that is easier to read and understand for the user. 
   print( area + ' has the greatest impact count with ' + str(cane_count) + ' since 1924' )
-  print()
-
 # max_cain_count()
 
 #************************************************************
 # Step 7: 
-# Calculating the Deadliest Hurricane
-# Declaring my function with no arguements
+# This step is similar to Step 6
+# Defining a function that does not accept any arguements
 def deadliest_cane():
+# Sets cane_deaths to 0 and cane_name as an empty string to be used later in the function
   cane_deaths = 0
   cane_name = ''
+# for loop that checks each entry in the deaths list and compares it to the current cane_deaths, and if it is larger deaths[i] becomes the new cane_deaths and names[i] becomes new cane_name
   for i in range(0, len(deaths)):
     if deaths[i] > cane_deaths:
       cane_deaths = deaths[i]
@@ -213,7 +214,7 @@ damage_scale = {0: 0,
                 2: 1000000000,
                 3: 10000000000,
                 4: 50000000000}
-
+# Create a directory with empty lists which we can append our hurricanes to when the function damage_assessor runs.
 hurricanes_by_damage = {0:[],1:[],2:[],3:[],4:[],5:[]}
 
 def damage_assessor():
